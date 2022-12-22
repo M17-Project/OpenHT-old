@@ -1,0 +1,121 @@
+# !!! WARNING !!! AUTO-GENERATED FILE, PLEASE DO NOT MODIFY IT AND USE
+# https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+#
+# If you need to override existing CMake configuration or add extra,
+# please create `CMakeListsUser.txt` in the root of project.
+# The `CMakeListsUser.txt` will not be overwritten by PlatformIO.
+
+
+
+set(CMAKE_CONFIGURATION_TYPES "disco_f469ni;nucleo_f303re;" CACHE STRING "Build Types reflect PlatformIO Environments" FORCE)
+
+# Convert "Home Directory" that may contain unescaped backslashes on Windows
+
+set(CLION_SVD_FILE_PATH "$ENV{HOME}/.platformio/platforms/ststm32/misc/svd/STM32F46_79x.svd" CACHE FILEPATH "Peripheral Registers Definitions File" FORCE)
+
+SET(CMAKE_C_COMPILER "$ENV{HOME}/.platformio/packages/toolchain-gccarmnoneeabi@1.80201.181220/bin/arm-none-eabi-gcc")
+SET(CMAKE_CXX_COMPILER "$ENV{HOME}/.platformio/packages/toolchain-gccarmnoneeabi@1.80201.181220/bin/arm-none-eabi-g++")
+SET(CMAKE_CXX_FLAGS "-Os -fcheck-new -std=c++11 -Wno-register -fno-exceptions -fno-rtti -imacros ${CMAKE_CURRENT_LIST_DIR}/.pio/build/disco_f469ni/zephyr/include/generated/autoconf.h -ffreestanding -fno-common -g -gdwarf-4 -fdiagnostics-color=always -mcpu=cortex-m4 -mthumb -mabi=aapcs -mfp16-format=ieee -imacros /home/mark/.platformio/packages/framework-zephyr/include/toolchain/zephyr_stdint.h -Wall -Wformat -Wformat-security -Wno-format-zero-length -Wno-main -Wpointer-arith -Wexpansion-to-defined -Wno-unused-but-set-variable -fno-asynchronous-unwind-tables -fno-pie -fno-pic -fno-strict-overflow -fno-reorder-functions -fno-defer-pop -fmacro-prefix-map=${CMAKE_CURRENT_LIST_DIR}/zephyr=CMAKE_SOURCE_DIR -fmacro-prefix-map=/home/mark/.platformio/packages/framework-zephyr=ZEPHYR_BASE -ffunction-sections -fdata-sections -nostdinc -nostdinc++ -isystem /home/mark/.platformio/packages/framework-zephyr/lib/libc/minimal/include -isystem /home/mark/.platformio/packages/framework-zephyr/subsys/cpp/include -isystem /home/mark/.platformio/packages/toolchain-gccarmnoneeabi@1.80201.181220/bin/../lib/gcc/arm-none-eabi/8.2.1/include -isystem /home/mark/.platformio/packages/toolchain-gccarmnoneeabi@1.80201.181220/bin/../lib/gcc/arm-none-eabi/8.2.1/include-fixed")
+SET(CMAKE_C_FLAGS "-Os -imacros ${CMAKE_CURRENT_LIST_DIR}/.pio/build/disco_f469ni/zephyr/include/generated/autoconf.h -ffreestanding -fno-common -g -gdwarf-4 -fdiagnostics-color=always -mcpu=cortex-m4 -mthumb -mabi=aapcs -mfp16-format=ieee -imacros /home/mark/.platformio/packages/framework-zephyr/include/toolchain/zephyr_stdint.h -Wall -Wformat -Wformat-security -Wno-format-zero-length -Wno-main -Wno-pointer-sign -Wpointer-arith -Wexpansion-to-defined -Wno-unused-but-set-variable -Werror=implicit-int -fno-asynchronous-unwind-tables -fno-pie -fno-pic -fno-strict-overflow -fno-reorder-functions -fno-defer-pop -fmacro-prefix-map=${CMAKE_CURRENT_LIST_DIR}/zephyr=CMAKE_SOURCE_DIR -fmacro-prefix-map=/home/mark/.platformio/packages/framework-zephyr=ZEPHYR_BASE -ffunction-sections -fdata-sections -std=c99 -nostdinc -isystem /home/mark/.platformio/packages/framework-zephyr/lib/libc/minimal/include -isystem /home/mark/.platformio/packages/framework-zephyr/subsys/cpp/include -isystem /home/mark/.platformio/packages/toolchain-gccarmnoneeabi@1.80201.181220/bin/../lib/gcc/arm-none-eabi/8.2.1/include -isystem /home/mark/.platformio/packages/toolchain-gccarmnoneeabi@1.80201.181220/bin/../lib/gcc/arm-none-eabi/8.2.1/include-fixed")
+
+SET(CMAKE_C_STANDARD 99)
+set(CMAKE_CXX_STANDARD 11)
+
+if (CMAKE_BUILD_TYPE MATCHES "disco_f469ni")
+    add_definitions(-DPLATFORMIO=60105)
+    add_definitions(-DSTM32F4)
+    add_definitions(-DSTM32F469xx)
+    add_definitions(-DLV_CONF_SKIP)
+    add_definitions(-DLV_CONF_INCLUDE_SIMPLE)
+    add_definitions(-DLV_LOG_LEVEL=LV_LOG_LEVEL_NONE)
+    add_definitions(-DBUILD_VERSION=zephyr-v20701)
+    add_definitions(-DCORE_CM4)
+    add_definitions(-DHSE_VALUE=8000000)
+    add_definitions(-DKERNEL)
+    add_definitions(-DLV_CONF_INCLUDE_SIMPLE=1)
+    add_definitions(-DSTM32F469xx)
+    add_definitions(-DUSE_FULL_LL_DRIVER)
+    add_definitions(-DUSE_HAL_DRIVER)
+    add_definitions(-D_FORTIFY_SOURCE=2)
+    add_definitions(-D__PROGRAM_START)
+    add_definitions(-D__ZEPHYR__=1)
+
+    include_directories("${CMAKE_CURRENT_LIST_DIR}/include")
+    include_directories("${CMAKE_CURRENT_LIST_DIR}/src")
+    include_directories("${CMAKE_CURRENT_LIST_DIR}/.pio/libdeps/disco_f469ni/Embedded Template Library/include")
+    include_directories("${CMAKE_CURRENT_LIST_DIR}/.pio/libdeps/disco_f469ni/Embedded Template Library")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-zephyr/include")
+    include_directories("${CMAKE_CURRENT_LIST_DIR}/.pio/build/disco_f469ni/zephyr/include/generated")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-zephyr/soc/arm/st_stm32/stm32f4")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-zephyr/drivers")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-zephyr/soc/arm/st_stm32/common")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-zephyr/_pio/modules/hal/cmsis/CMSIS/Core/Include")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-zephyr/_pio/modules/hal/stm32/stm32cube/stm32f4xx/soc")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-zephyr/_pio/modules/hal/stm32/stm32cube/stm32f4xx/drivers/include")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-zephyr/_pio/modules/hal/stm32/stm32cube/stm32f4xx/drivers/include/Legacy")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-zephyr/_pio/modules/hal/stm32/stm32cube/common_ll/include")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-zephyr/lib/gui/lvgl")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-zephyr/_pio/modules/lib/gui/lvgl")
+    include_directories("$ENV{HOME}/.platformio/packages/toolchain-gccarmnoneeabi@1.80201.181220/arm-none-eabi/include/c++/8.2.1")
+    include_directories("$ENV{HOME}/.platformio/packages/toolchain-gccarmnoneeabi@1.80201.181220/arm-none-eabi/include/c++/8.2.1/arm-none-eabi")
+    include_directories("$ENV{HOME}/.platformio/packages/toolchain-gccarmnoneeabi@1.80201.181220/lib/gcc/arm-none-eabi/8.2.1/include-fixed")
+    include_directories("$ENV{HOME}/.platformio/packages/toolchain-gccarmnoneeabi@1.80201.181220/lib/gcc/arm-none-eabi/8.2.1/include")
+    include_directories("$ENV{HOME}/.platformio/packages/toolchain-gccarmnoneeabi@1.80201.181220/arm-none-eabi/include")
+
+    FILE(GLOB_RECURSE EXTRA_LIB_SOURCES
+        ${CMAKE_CURRENT_LIST_DIR}/.pio/libdeps/disco_f469ni/*.*
+    )
+endif()
+
+if (CMAKE_BUILD_TYPE MATCHES "nucleo_f303re")
+    add_definitions(-DPLATFORMIO=60105)
+    add_definitions(-DSTM32F303xE)
+    add_definitions(-DLV_CONF_SKIP)
+    add_definitions(-DLV_CONF_INCLUDE_SIMPLE)
+    add_definitions(-DLV_LOG_LEVEL=LV_LOG_LEVEL_NONE)
+    add_definitions(-DBUILD_VERSION=zephyr-v20701)
+    add_definitions(-DCORE_CM4)
+    add_definitions(-DHSE_VALUE=8000000)
+    add_definitions(-DKERNEL)
+    add_definitions(-DLV_CONF_INCLUDE_SIMPLE=1)
+    add_definitions(-DSTM32F303xE)
+    add_definitions(-DUSE_FULL_LL_DRIVER)
+    add_definitions(-DUSE_HAL_DRIVER)
+    add_definitions(-D_FORTIFY_SOURCE=2)
+    add_definitions(-D__PROGRAM_START)
+    add_definitions(-D__ZEPHYR__=1)
+
+    include_directories("${CMAKE_CURRENT_LIST_DIR}/include")
+    include_directories("${CMAKE_CURRENT_LIST_DIR}/src")
+    include_directories("${CMAKE_CURRENT_LIST_DIR}/.pio/libdeps/nucleo_f303re/Embedded Template Library/include")
+    include_directories("${CMAKE_CURRENT_LIST_DIR}/.pio/libdeps/nucleo_f303re/Embedded Template Library")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-zephyr/include")
+    include_directories("${CMAKE_CURRENT_LIST_DIR}/.pio/build/nucleo_f303re/zephyr/include/generated")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-zephyr/soc/arm/st_stm32/stm32f3")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-zephyr/drivers")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-zephyr/soc/arm/st_stm32/common")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-zephyr/_pio/modules/hal/cmsis/CMSIS/Core/Include")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-zephyr/_pio/modules/hal/stm32/stm32cube/stm32f3xx/soc")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-zephyr/_pio/modules/hal/stm32/stm32cube/stm32f3xx/drivers/include")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-zephyr/_pio/modules/hal/stm32/stm32cube/stm32f3xx/drivers/include/Legacy")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-zephyr/_pio/modules/hal/stm32/stm32cube/common_ll/include")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-zephyr/lib/gui/lvgl")
+    include_directories("$ENV{HOME}/.platformio/packages/framework-zephyr/_pio/modules/lib/gui/lvgl")
+    include_directories("$ENV{HOME}/.platformio/packages/toolchain-gccarmnoneeabi@1.80201.181220/arm-none-eabi/include/c++/8.2.1")
+    include_directories("$ENV{HOME}/.platformio/packages/toolchain-gccarmnoneeabi@1.80201.181220/arm-none-eabi/include/c++/8.2.1/arm-none-eabi")
+    include_directories("$ENV{HOME}/.platformio/packages/toolchain-gccarmnoneeabi@1.80201.181220/lib/gcc/arm-none-eabi/8.2.1/include-fixed")
+    include_directories("$ENV{HOME}/.platformio/packages/toolchain-gccarmnoneeabi@1.80201.181220/lib/gcc/arm-none-eabi/8.2.1/include")
+    include_directories("$ENV{HOME}/.platformio/packages/toolchain-gccarmnoneeabi@1.80201.181220/arm-none-eabi/include")
+
+    FILE(GLOB_RECURSE EXTRA_LIB_SOURCES
+        ${CMAKE_CURRENT_LIST_DIR}/.pio/libdeps/nucleo_f303re/*.*
+    )
+endif()
+
+FILE(GLOB_RECURSE SRC_LIST
+    ${CMAKE_CURRENT_LIST_DIR}/src/*.*
+    ${CMAKE_CURRENT_LIST_DIR}/lib/*.*
+    ${CMAKE_CURRENT_LIST_DIR}/test/*.*
+)
+
+list(APPEND SRC_LIST ${EXTRA_LIB_SOURCES})
