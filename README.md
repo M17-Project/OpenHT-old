@@ -51,3 +51,6 @@ Open risks (things we want to buy down quicky):
 ## Software used
 * Zephyr
 * Lattice Radiant (https://www.latticesemi.com/latticeradiant)
+
+## Sub Repos
+firmware --> https://github.com/M17-Project/OpenHT-firmware 
